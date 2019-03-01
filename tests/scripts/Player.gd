@@ -6,7 +6,17 @@ export (float) var desacceleration = 1.0
 export (float) var jump_force
 
 var is_in_air = true
-
+func underwater(yes,water_posy):
+	
+	var diffy=(water_posy-position.y)/100
+	if yes:
+		gravity_scale = diffy*30
+		linear_velocity.y /= 1.5
+	else:
+		gravity_scale =30
+	return linear_velocity
+func get_size():
+	return Vector2(32,32)
 func _ready():
 	if jump_force == null:
 		jump_force = gravity_scale * 10
