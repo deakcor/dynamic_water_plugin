@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-7c1e58275ae1e3cfa6ce13114b746973.stex"
+path="res://.import/Ice02.jpg-cb8b57809be36f47d805fa656c959c56.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/DYNAMIC_WATER/icon.png"
-dest_files=[ "res://.import/icon.png-7c1e58275ae1e3cfa6ce13114b746973.stex" ]
+source_file="res://graphismes/Ice02.jpg"
+dest_files=[ "res://.import/Ice02.jpg-cb8b57809be36f47d805fa656c959c56.stex" ]
 
 [params]
 

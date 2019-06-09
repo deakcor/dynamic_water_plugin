@@ -2,18 +2,16 @@ tool
 extends Node2D
 
 #variables seen in editor
-export (float) var HEIGHT = 0
-export (float) var WIDTH = 0
-export (float) var QUALITY = 1
-export (Color) var COR = Color(1.0, 1.0, 1.0, 1.0)
+export (float) var HEIGHT = 100
+export (float) var WIDTH = 100
+export (float) var QUALITY = 100
 export (ParticlesMaterial) var droplets_material_path
-
-export (float) var TENSION = 0.025
-export (float) var DAMPING = 0.001
+export (float) var TENSION = 0.01
+export (float) var DAMPING = 0.025
 export (int) var PASSES = 1
-export (float) var DISPERSION = 0.01
-export (float) var force_multiplier = 0.01
-export (int) var NUMBER_OF_VECS_TO_APPLY_FORCE = 1
+export (float) var DISPERSION = 0.1
+export (float) var force_multiplier = 0.001
+export (int) var NUMBER_OF_VECS_TO_APPLY_FORCE = 5
 
 #non-modifiable variables
 var vecs_positions = []
@@ -30,6 +28,7 @@ func _ready(): #function called up in the execution of the node
 	if Engine.is_editor_hint() == false:
  		create_water_block()
 	set_process(true)
+	pass
 
 func _process(delta): #function called every frame
 	if Engine.is_editor_hint() == false:
@@ -89,7 +88,7 @@ func create_water_block(): #water creation
 	#assignment of variables to custom nodes
 	water_block.name = "water_base"
 	water_block.polygon = vecs
-	water_block.color = COR
+	water_block.color = Color(1.0, 1.0, 1.0, 1.0)
 
 	area.name = "water_area"
 	
@@ -115,6 +114,7 @@ func create_water_block(): #water creation
 	#new nodes
 	water = $"./water_base"
 	_col = $"./water_base/water_area/water_col"
+	water.material=material
 #water distortion, take velocity of the object, his position and his size
 func distortion(velocity,pos,size):
 	#the force, the more the body is deep, less the water will be impacted
@@ -151,8 +151,8 @@ func body_emerged(body): #body go underwater
 		if droplets_material_path != null:
 			var droplets = Particles2D.new()
 			droplets.name = "particles"
-			droplets.amount = 20
-			droplets.lifetime = 2
+			droplets.amount = 10
+			droplets.lifetime = 0.5
 			droplets.explosiveness = 1
 			droplets.one_shot = true
 			droplets.local_coords = false
@@ -174,6 +174,7 @@ func body_not_emerged(body):
 		bodies.remove(bodies.find(body))
 
 func _draw(): #polygon drawing for viewing by the editor
+	
 	var vecs = PoolVector2Array([])
 	var color = PoolColorArray([])
 	if Engine.is_editor_hint():

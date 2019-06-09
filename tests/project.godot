@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="tweaks"
+config/name="dynamic water"
 run/main_scene="res://scenes/world.tscn"
 config/icon="res://icon.png"
 

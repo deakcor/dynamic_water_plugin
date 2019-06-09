@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-7c1e58275ae1e3cfa6ce13114b746973.stex"
+path="res://.import/water.png-12bdf2e8d991af98164818c0e55fbde5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/DYNAMIC_WATER/icon.png"
-dest_files=[ "res://.import/icon.png-7c1e58275ae1e3cfa6ce13114b746973.stex" ]
+source_file="res://graphismes/water.png"
+dest_files=[ "res://.import/water.png-12bdf2e8d991af98164818c0e55fbde5.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false

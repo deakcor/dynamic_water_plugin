@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-7c1e58275ae1e3cfa6ce13114b746973.stex"
+path="res://.import/texture_roche.jpg-18ac2724c531aa590918be4d78bf6813.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/DYNAMIC_WATER/icon.png"
-dest_files=[ "res://.import/icon.png-7c1e58275ae1e3cfa6ce13114b746973.stex" ]
+source_file="res://graphismes/texture_roche.jpg"
+dest_files=[ "res://.import/texture_roche.jpg-18ac2724c531aa590918be4d78bf6813.stex" ]
 
 [params]
 
