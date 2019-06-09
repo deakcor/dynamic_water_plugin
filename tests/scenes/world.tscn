@@ -65,19 +65,19 @@ void fragment(){
 		COLOR= mix(textureLod(SCREEN_TEXTURE,SCREEN_UV+offset*force,0.0), vec4(color.rgb,1.0),color.a);
 	}"
 
-[sub_resource type="OpenSimplexNoise" id=9]
+[sub_resource type="OpenSimplexNoise" id=8]
 seed = 5
 period = 100.0
 persistence = 0.1
 
-[sub_resource type="NoiseTexture" id=10]
-noise = SubResource( 9 )
+[sub_resource type="NoiseTexture" id=9]
+noise = SubResource( 8 )
 
-[sub_resource type="ShaderMaterial" id=8]
+[sub_resource type="ShaderMaterial" id=10]
 shader = SubResource( 7 )
 shader_param/force = 0.01
 shader_param/color = Color( 0.921569, 0.921569, 1, 0.584314 )
-shader_param/noise = SubResource( 10 )
+shader_param/noise = SubResource( 9 )
 
 [node name="ROOT" type="Node2D"]
 __meta__ = {
@@ -113,7 +113,7 @@ position = Vector2( 523, 262 )
 texture = ExtResource( 5 )
 
 [node name="ice" type="Sprite" parent="."]
-material = SubResource( 8 )
+material = SubResource( 10 )
 position = Vector2( 591, 263 )
 texture = ExtResource( 5 )
 

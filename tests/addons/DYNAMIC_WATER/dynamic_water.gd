@@ -153,6 +153,7 @@ func body_emerged(body): #body go underwater
 			droplets.name = "particles"
 			droplets.amount = 10
 			droplets.lifetime = 0.5
+			
 			droplets.explosiveness = 1
 			droplets.one_shot = true
 			droplets.local_coords = false
